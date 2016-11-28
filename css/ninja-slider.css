@@ -1,0 +1,321 @@
+/* Visit http://www.menucool.com/ninja-slider.aspx for instructions */
+
+#ninja-slider
+{
+    width:100%;
+    margin:0 auto; /*center aligned*/
+}
+#ninja-slider > ul
+{
+    padding:0px;
+}
+
+/* slide */
+#ninja-slider li > div, #ninja-slider li > a
+{
+    max-width:100%;
+    margin:auto; /* center each slide */
+    position: relative;
+    display:block;
+}
+
+/* loading image indicator */    
+#ninja-slider div.preload 
+{
+    background: black url(images/loading.gif) no-repeat center center;
+}
+
+/*------ pager ------*/      
+/* The pager id should be: slider id + "-pager" */    
+#ninja-slider-pager
+{
+     /* set the distance away from the slider */
+	margin:auto; /* center align */
+    text-align:center;
+	padding-bottom:5px;
+	margin-top:-40px;
+    display:block;
+	padding:2px;
+	position:relative;
+	z-index:0;
+}
+         
+#ninja-slider-pager a 
+{
+    display:inline-block;
+	visibility:hidden;
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    font-size:0;
+    margin:2px 6px;
+    cursor:pointer;
+    border-radius:10px;
+    box-shadow:inset 0 1px 3px #ededed;
+	position:relative;
+	-moz-box-shadow:    0.5px 0.5px 3px 0px #3e3e3e;
+  -webkit-box-shadow: 0.5px 0.5px 3px 0px #3e3e3e;
+  box-shadow:         0.5px 0.5px 3px 0px #3e3e3e;
+	z-index:2;
+}
+#ninja-slider-pager a:hover 
+{
+    opacity:0.8;
+}
+#ninja-slider-pager a.active 
+{
+    background-color:#0065a4;
+    box-shadow:inset 0 1px 3px -1px #28b4ea,0 1px 1px rgba(0,0,0,.5);
+}
+ 
+/* --------- navigation controls ------- */   
+/* The nav id should be: slider id + ("-prev", "-next", and "-pause-play") */    
+#ninja-slider-prev, #ninja-slider-next
+{
+    position: absolute;
+    top: 40%;
+    width:72px;
+    height:64px;
+    display:inline-block;
+    margin:0;
+    background-image: url(../images/arrows.png);
+}
+#ninja-slider-prev {
+    left: 0;
+	cursor:pointer;
+    background-position:0 0;
+}
+
+
+#ninja-slider-next {
+    right: 0;
+	cursor:pointer;
+    background-position:-72px 0;
+}
+
+#ninja-slider-pause-play { display:none;}
+
+
+
+/*------- Settings that usually don't need to change ------- */
+#ninja-slider > ul
+{
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    backface-visibility: hidden;
+    perspective: 1000px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#ninja-slider-pager, #ninja-slider-prev, #ninja-slider-next, #ninja-slider-pause-play
+{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+#ninja-slider
+{
+    position: relative;
+    overflow: hidden;
+    /*visibility: hidden;*/
+    padding:0;
+}
+#ninja-slider > ul
+{
+    overflow: hidden;
+    position: relative;
+    list-style:none;
+    margin:0;
+}
+
+#ninja-slider > ul > li
+{
+    float: left;
+    width: 100%;
+    position: relative;
+    list-style:none;
+    padding:0;margin:0;
+}
+/* Caption styles */
+
+.lps_container {
+	width:500px;
+	height:500px;
+	display:block;
+	top:4%;
+	left:22%;
+	position:absolute;
+	padding:12px;
+	margin:auto;
+	background:#236477;
+	border-radius:18px;
+	border:5px solid #FFF;
+	color:#FFF;
+}
+.lps_container h2 {
+	color:#FFF;
+	font-weight:200;
+	font-size:2.6em;
+	text-align:center;
+}
+.lps_container h4 {
+	color:#62c3d9;
+	font-weight:200;
+	font-size:1.4em;
+	text-align:center;
+}
+
+/* Media CSS */
+@media only screen and (max-width: 1200px) {
+	.lps_container {
+	width:500px;
+	height:500px;
+	display:block;
+	position:relative;
+	padding:12px;
+	margin:auto;
+	top:1%;
+	left:1%;
+}
+}
+@media only screen and (max-width: 780px) {
+	.lps_container {
+	width:500px;
+	height:500px;
+	display:block;
+	position:relative;
+	padding:12px;
+	margin:auto;
+	top:1%;
+	left:1%;
+}
+}
+@media only screen and (max-width: 500px) {
+	.lps_container {
+	width:auto;
+	height:auto;
+	display:block;
+	position:relative;
+	padding:12px;
+	margin:auto;
+	top:1%;
+	left:1%;
+}
+}
+
+/* ---- */
+
+.olb_main ul.online_location_byphone {
+	margin:16px 0px 5px;
+	text-align:center;
+}
+.online_location_byphone li {
+    margin:0px 20px;
+	padding:10px 0px;
+	display:inline-block;
+	color:#fff;
+	text-align:center;
+}
+
+.online_location_byphone li h3 {
+	color:#FFF;
+	font-weight:100;
+	font-size:1.3em;
+	font-weight:bold;
+	text-align:left;
+}
+
+.online_location_byphone li.olb_click {
+	background-image:url("../images/click_icn.png");
+	background-position:left center;
+	background-repeat:no-repeat;
+	text-indent:40px;
+}
+.online_location_byphone li.olb_location {
+	background-image:url("../images/location_icn.png");
+	background-position:left center;
+	background-repeat:no-repeat;
+	text-indent:40px;
+}
+.online_location_byphone li.olb_byphone {
+	background-image:url("../images/call_icn.png");
+	background-position:left center;
+	background-repeat:no-repeat;
+	text-indent:40px;
+}
+
+/* olb sub text */
+.olb_sub_text_box {
+	margin:0 auto;
+	text-align:center;
+}
+ul.olb_sub_text {
+	list-style:none;
+	display:inline-block;
+	float:left;
+}
+ul.olb_sub_text li {
+	margin:0px auto;
+	padding:0px 0px;
+	float:left;
+	font-size:14px;
+	text-align:center;
+	text-indent:24px;
+}
+
+/* olb white box */
+
+.slide_section_box {
+	margin:35px auto 15px;
+	background-color:#FFF;
+	width:auto;
+	padding:16px;
+	color:#236477;
+	border-radius:12px;
+	text-align:center;
+}
+.slide_section_box h4 {
+	font-size:18px;
+	font-weight:100;
+	color:#ff3333;
+	text-align:center;
+}
+
+/* olb numbers count */
+.numbers_count_box {
+	margin:10px auto;
+}
+ul.numbers_count {
+	display:inline-block;
+	padding:0px 10px;
+	margin:10px auto;
+}
+ul.numbers_count li {
+	display:inline-block;
+	padding:0px 10px;
+	font-size:18px;
+	font-weight:400;
+}
+
+.applynow_btn {
+	margin:10px auto;
+	padding:10px 10px;
+	background-color:#ff3333;
+	color:#fff;
+	font-size:18px;
+	font-weight:bold;
+	border:none;
+	text-align:center;
+	cursor:pointer;
+	border-radius:6px;
+}
+.applynow_btn:hover {
+	background-color:#c61515;
+}
+p.approval_in_minute {
+	font-size:20px;
+	color:#999;
+	margin:10px auto 5px;
+}
